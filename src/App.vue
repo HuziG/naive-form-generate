@@ -5,17 +5,31 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite to build naive ui form" />
+  <div class="bg-gray-100 h-screen w-screen flex flex-col overflow-hidden">
+    <div class="h-12 flex items-center flex-shrink-0 border-b">
+      header
+    </div>
+    <div class="flex-1">
+      <n-grid style="height: 100%;position: relative;">
+        <n-gi :span="5">
+          <div class="p-3 border-box">
+            6
+          </div>
+        </n-gi>
+        <n-gi :span="14">
+          <div class="border-l border-r h-full p-3 border-box">
+            12
+          </div>
+        </n-gi>
+        <n-gi :span="5">
+          <div class="p-3 border-box">
+            6
+          </div>
+        </n-gi>
+      </n-grid>
+    </div>
+  </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>

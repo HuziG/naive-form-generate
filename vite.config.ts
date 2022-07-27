@@ -5,21 +5,19 @@ import {
   NaiveUiResolver,
 } from 'unplugin-vue-components/resolvers'
 import Unocss from 'unocss/vite'
-import presetIcons from '@unocss/preset-icons'
+// import presetIcons from '@unocss/preset-icons'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
+
     Components({
       resolvers: [
         NaiveUiResolver(),
       ],
     }),
-    Unocss({
-      presets: [
-        presetIcons({}),
-      ],
-    }),
+
+    Unocss(),
   ],
 })
