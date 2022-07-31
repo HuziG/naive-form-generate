@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
+import Cmps from './components/Cmps/index.vue'
 </script>
 
 <template>
@@ -13,7 +13,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <n-grid style="height: 100%;position: relative;">
         <n-gi :span="5">
           <div class="p-3 border-box">
-            6
+            <cmps />
           </div>
         </n-gi>
         <n-gi :span="14">
