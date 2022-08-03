@@ -12,17 +12,17 @@ import Cmps from './components/Cmps/index.vue'
     <div class="flex-1">
       <n-grid style="height: 100%;position: relative;">
         <n-gi :span="5">
-          <div class="p-3 border-box">
+          <div class="p-3 border-box overflow-hidden">
             <cmps />
           </div>
         </n-gi>
         <n-gi :span="14">
-          <div class="border-l border-r h-full p-3 border-box">
+          <div class="border-l border-r h-full p-3 border-box overflow-hidden">
             12
           </div>
         </n-gi>
         <n-gi :span="5">
-          <div class="p-3 border-box">
+          <div class="p-3 border-box overflow-hidden">
             6
           </div>
         </n-gi>

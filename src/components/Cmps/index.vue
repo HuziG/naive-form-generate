@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { layoutComponents } from './baseCmp'
 
-const cmpCellStyle = ref('text-sm py-1 px-5 rounded bg-gray-200 border border-transparent hover:text-primary hover:border-primary hover:border hover:border-dashed border-box cursor-move')
+const cmpCellStyle = ref('text-sm py-2 px-5 flex items-center rounded bg-gray-200 border border-transparent hover:text-primary hover:border-primary hover:border hover:border-dashed border-box cursor-move')
 </script>
 
 <template>
@@ -10,14 +11,10 @@ const cmpCellStyle = ref('text-sm py-1 px-5 rounded bg-gray-200 border border-tr
   </div>
 
   <n-grid x-gap="12">
-    <n-gi :span="12">
-      <div :class="cmpCellStyle">
-        栅格
-      </div>
-    </n-gi>
-    <n-gi :span="12">
-      <div :class="cmpCellStyle">
-        按钮
+    <n-gi v-for="item in layoutComponents" :key="item.__config__.tag" :span="12">
+      <div :class="`${cmpCellStyle}`">
+        <div :class="`inline-block text-base ${item.__config__.tagIcon}`" />
+        <span class="ml-3">{{ item.__config__.label }}</span>
       </div>
     </n-gi>
   </n-grid>
